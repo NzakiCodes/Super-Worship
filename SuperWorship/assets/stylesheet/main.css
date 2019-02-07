@@ -1,0 +1,191 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+/**/
+.eas-bar, .eas-bar span{
+	text-align: center;
+	color: #F5F5F5 !important;
+}
+.eas-bar{
+	background-color: #1F4F98 !important; /* Old browsers */
+	background: -moz-linear-gradient(top, #1F4F98 20%, #4d6c89 120%); 
+	border-bottom: 1px solid white;
+	position: fixed;
+	width:100%;height: 25px; 
+}
+.eas-theme-grad{	
+	color: #1F4F98 !important; 
+	border:1px solid #1F4F98 !important; 
+}
+.eas-theme-border{
+	border:1px solid #1F4F98 !important; 
+}
+.eas-theme-text{color: #1F4F98 !important; }
+.eas-theme-gradient{
+	background-image: url(../../images/icons/bar.png) !important;
+	background-repeat: repeat-x;
+	color: white !important; 
+	border:1px solid #1F4F98 !important; 
+}
+.eas-body-open, .eas-body-close {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.eas-body-open .eas-side {
+	float: left;
+	width: 20%;
+	transition: 0.3s;
+	border-right: 2px solid white;
+	overflow: auto;
+}
+.eas-body-close .eas-side {
+	width: 0%;
+	transition: 0.3s;
+	display: none;
+}
+.eas-body-open .eas-first-pane, .eas-body-open .eas-second-pane{
+	float: left;
+	width: 40%;
+	transition: 0.3s;
+	height: 100%;
+}
+.eas-body-close .eas-first-pane,.eas-body-close .eas-second-pane  {
+	width: 50%;
+	transition: 0.3s;
+}
+.eas-body-open .eas-first-pane{
+	height: 100%;
+	position: fixed;
+	top: 53.7%;
+	left: 40%;
+	transform: translate(-50%,-50%);-ms-transform:translate(-50%,-50%)
+}
+.eas-body-close .eas-first-pane{
+	height: 100%;
+	position: fixed;
+	top: 53.7%;
+	left: 0%;
+	transform: translate(0%,-50%);-ms-transform:translate(0%,-50%)
+}
+.eas-body-open .eas-second-pane{
+	height: 100%;
+	position: fixed;
+	top: 53.7%;
+	left: 80%;
+	transform: translate(-50%,-50%);-ms-transform:translate(50%,50%);
+	
+}
+.eas-body-close .eas-second-pane{
+	height: 100%;
+	position: fixed;
+	top: 53.7%;
+	left: 50%;
+	transform: translate(0%,-50%);-ms-transform:translate(0%,-50%);
+	
+}
+.eas-body-close .eas-side {
+	height: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(0%,-50%);-ms-transform:translate(50%,50%);
+	
+}
+.eas-body-open .eas-side {
+	height: 100%;
+	position: fixed;
+	top: 53.7%;
+	left: 0;
+	transform: translate(0%,-50%);-ms-transform:translate(50%,50%);
+	
+}
+.eas-body-close .eas-side {
+	height: 0;	
+}
+
+ .eas-body-close .eas-first-pane,.eas-body-open .eas-first-pane{
+	border-right: 2px solid white;
+}
+.eas-screen-1{
+	height: 42%;
+	border-bottom:1px solid #1F4F98 !important; 
+}
+.eas-screen-2{
+	height: 58%;
+}
+.eas-screen-1,.eas-screen-2{
+	padding: 1px;
+}
+.eas-search-box{
+	width: 100%;
+}
+.eas-search-box input{
+	padding: 3px;
+	width: 55%; 
+	border: 0px;
+}
+.ea-toptab{
+	margin: 2px;
+	text-align: center;
+	/*border:1px solid #1F4F98;*/
+	padding: 2px ;
+	border-radius: 16px;
+	}
+	.ea-toptab a{
+		background-image: url(../../images/icons/bar.png) !important;
+	background-repeat: repeat-x;
+		color: white;
+		padding: 2px 20px;
+		display: inline-block;
+		margin-left: -5px;border: 1px solid #1B3966;
+	}
+	.ea-toptab a:hover{
+		background: white !important;
+		color: #1F4F98;
+			}
+	.ea-toptab a:first-child {
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
+		border-right: 1px solid #1B3966;
+
+	}
+	.ea-toptab a:last-child {
+		border-top-right-radius: 16px;
+		border-bottom-right-radius: 16px;
+		border-left: 1px solid #1B3966;
+	}
+	
+	.theme-hover-bg{
+	transition: 0.5s;
+}
+.theme-hover-bg:hover{
+	background-color: #1F4F98 !important;
+	color: white!important;
+	transition: 0.3 s;
+}
+.theme-text{
+	color: #1F4F98;
+}
+ .theme-hover-txt:hover{
+	background-color: white !important;
+	color: #1F4F98 !important;
+	transition: 0.3s;
+}
+.theme-border{
+	border-color: #1F4F98 !important;
+}
+.icon{overflow:hidden;/*float:left;*/font-weight: bold;margin-right: 7px;}
+.nbar{
+	background-image: url(../../images/icons/bar.png) !important;
+	background-repeat: repeat-x;
+}
+.live-tag{
+	background-color: #fe4f8a !important;
+	color: white;
+}
+.hover-text-pink:hover{color:#e91e63 !important}
+.ea-toptab .icon{
+	float: left;
+}

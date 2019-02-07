@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="Title" content="Easy Worship for Web" >
+	<title>Super Worship For web</title>
+	<link rel="stylesheet" type="text/css" href="assets/stylesheet/w3.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheet/new.css">
+	<link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.css">
+	<link rel="stylesheet" href="icons/styles.css">
+	<script src="scripts/js/aim.js" aim-jsonly="true" aim-file="scripts/js/main.js" onload="" type="text/javascript" charset="utf-8"></script>
+	<style>
+.eas-alert {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  text-align: center;
+  background-color: white;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 30px;
+  font-size: 17px;
+}
+
+.eas-alert.w3-show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 25%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+	z-index: 100;
+}
+</style>
+</head>
+<body class=""  >
+	<!--<div class="w3-display-container w3-red"onload="_('mbody').Show();">
+		<div class="w3-display-middle">
+			<div class="w3-jumbo">
+				<i class="fas fa-circle-o-notch fa-spin w3-red"></i>
+			</div>
+		</div>
+	</div>-->
+<div class="mbody" >
+	<!-- Top Bar -->
+	<div class="w3-bar w3-top eas-capsule-bar w3-text-white eas-theme-bar w3-container" >
+		<!-- <a href="#" class="w3-left"> <i  class="fas fa-arrow-left"></i> </a> -->
+		<div class="w3-center"><i class="icon icon-home "></i><span class="w3-small" > Super Worship &#187; 4Web <!-- <button id="animBtn" class="eas-theme-grad eas-theme-border ">say hello</button> --></span></div>
+	</div>
+
+	<!-- Body -->
+	<div id="bodyC" class="eas-body-open " >
+		<!-- Side-Bar -->
+		<div class="eas-side w3-animate-top eas-theme-text ">
+			<div class="w3-white w3-card eas-cap-head">
+				<div class="ea-toptab w3-small eas-capsule-bar w3-row">
+					<a title="New File"  class="w3-col s4 m4 l4 " onclick="_('new_file').Show();"><i class="fas fa-file"></i> 	</a>
+					<a title=""  class="eas-active-tab w3-col s4 m4 l4 " onclick="_('alert_image').Show();"><i class="fas fa-list"></i></a>
+					<a title="" class=" w3-col s4 m4 l4 " onclick="_('alert').Show();"><i class="fas fa-cog"></i> </a>
+				</div>
+			</div>
+				<!-- Schedule List -->
+			<div class="schedule w3-card w3-small">
+				<ul class="w3-ul w3-border-top">
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/city.jpg" alt="Background Image" title="Background Image: City" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">City Building </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/build.jpg" alt="Background Image" title="Background Image: Building" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Block Building </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/bless.jpg" alt="Background Image" title="Background Image: Blessing Akpan" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Blessing Akpan </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/edidiong.jpg" alt="Background Image" title="Background Image: Edidiong Asikpo" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Edidiong Asikpo </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/elisha.jpg" alt="Background Image" title="Background Image: Elisha Ukpong" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title"> Elisha Ukpong </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/bg.jpg" alt="Background Image" title="Background Image: Apple Design" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Apple Design </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/pebbles.jpg" alt="Background Image" title="Background Image: Pebbles Image" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Pebbles Image </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/space.jpg" alt="Background Image" title="Background Image: Working Space" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Working Space </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+					<li class="w3-display-container "><span class="w3-display-left w3-margin-left"><img src="images/mainbg.png" alt="Background Image" title="Background Image: Blank" style="width:20%" class=" w3-image  w3-border"></span><span class="w3-row"><span class="w3-col m3 l3 s3"> .</span><span class="w3-col l8 m8 s8"><span class="eas-schedule-title">Blank Background </span><span class="eas-schedule-comment">Comment</span></span> <span class="eas-btn-bulls w3-white w3-transparent w3-display-right w3-hover-white w3-tiny"> <span class="w3-large fas fa-ellipsis-h "></span></span></li>
+				    
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- First Pane -->
+		<div class="eas-first-pane eas-theme-border eas-theme-color">
+			<!-- Top Display -->
+			<div class="eas-top-display" id="eas-top-display1">
+				<div class="w3-display-container">
+					<div class="w3-display-topmiddle w3-padding-64 w3-margin-top w3-xlarge eas-theme-text">[PREVIEW]</div>
+					
+				</div>
+			</div>
+			<!-- Bottom Display -->
+			<div class="eas-bottom-display ">
+				<!-- First Tab -->
+				<div class=" eas-theme-text ">
+					<div class="w3-row eas-theme-grad">
+						<div class="w3-half ">
+							<a href="#" title="" class="eas-theme-grad w3-text-white eas-active eas-search-box w3-btn eas-active">
+								<i class="icon icon-magnifying-glass-browser" ></i> Search
+							</a>
+						</div>
+						<div class="w3-half">
+							<a href="#" title="" class="eas-theme-grad w3-text-white eas-search-box w3-btn  ">
+								<i class="fas fa-images"></i>  Media
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- Second Tab -->
+				<div id="searchbar" class=" eas-theme-border eas-theme-grad">
+					<div class="w3-row">
+						<div class="w3-col l7 m7 s7 w3-card">
+							<input type="text" class="eas-search w3-card eas-abs" name="search" value="Genesis 1:1" placeholder="Genesis 1:1" >
+						</div>
+						<div class="w3-col s5 m5 l5 eas-theme-border w3-center" >
+							<span class=" eas-abs  ">
+								<a href="#" title="" class="w3-button  w3-text-white eas-hover-white  eas-abs">
+									<i class="fas fa-angle-down"></i>  
+								</a>
+								<a href="#" title="" class=" w3-text-white eas-hover-white w3-button eas-abs" >
+									<i class="fas fa-angle-up"></i>  
+								</a>
+							</span>
+							<!-- <span class=" eas-abs eas-theme-border">
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs" style="">
+									<i class="fas fa-angle-left"></i>  
+								</a>
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs" >
+									<i class="fas fa-angle-right"></i>  
+								</a>
+							</span> -->
+
+							<div class="w3-right">
+								<a href="#" title="" class="w3-btn w3-pink eas-abs" ><i class="fas fa-tv"></i>Go LIVE</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="content w3-small" style="overflow: auto">
+					<ul class="w3-ul w3-border-top">
+				    <li class="w3-display-container"><span class="w3-text-pink"><i class="fas fa-bible"></i> Genesis 1:1</span>
+In the beginning God created the heaven and the earth.(KJV)<span class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:2</span>
+
+And the earth was without form, and void; and darkness [was] upon the face of the deep. And the Spirit of God moved upon the face of the waters.(KJV)<span  class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:3</span>
+
+And God said, Let there be light: and there was light.(KJV)<span  class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:4</span>
+And God saw the light, that [it was] good: and God divided the light from the darkness.(KJV)
+In the beginning God created the heaven and the earth.(KJV) <span class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    
+				</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Second Pane -->
+		<div class="eas-second-pane eas-theme-border eas-theme-color">
+			<!-- Top Display -->
+			<div class="eas-top-display" id="eas-top-display2">
+				<div class="w3-display">
+					<div class="w3-display-topmiddle w3-padding-64 w3-margin-top w3-xlarge eas-theme-text">[LIVE]</div>
+					<div class="w3-display-topright">
+						<div class="eas-live-tag w3-btn eas-theme-text w3-card-4 startblink"><i class="fas fa-dot-circle-o"></i>LIVE</div>
+					</div>
+				</div>
+			</div>
+			<!-- Bottom Display -->
+			<div class="eas-bottom-display">
+				<div class="w3-row eas-theme-grad" style="padding-top: 4px!important">
+					<div class="w3-third">
+							<span>
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn " style="padding: 3px 6px;margin-right:-1px;">
+								<i class="fas fa-clock"></i>  
+							</a>
+							
+								<input type="text" name="" style="margin-left:-1px;padding: 2% 3%;width: 28%;height: 28%;" value="5secs" class="w3-small" >
+							
+							</span>
+							<!-- <span class="eas-theme-border eas-abs">
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs">
+									<i class="fas fa-angle-down"></i>  
+								</a>
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs" >
+									<i class="fas fa-angle-up"></i>  
+								</a>
+							</span> --><span class=" eas-abs  ">
+								<a href="#" title="" class="w3-button  w3-text-white eas-hover-white  eas-abs">
+									<i class="fas fa-angle-down"></i>  
+								</a>
+								<a href="#" title="" class=" w3-text-white eas-hover-white w3-button eas-abs" >
+									<i class="fas fa-angle-up"></i>  
+								</a>
+							</span>
+							<div class=" eas-theme-border" >
+							
+							<!-- <span class=" eas-abs eas-theme-border">
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs" style="">
+									<i class="fas fa-angle-left"></i>  
+								</a>
+								<a href="#" title="" class="eas-theme-grad w3-text-white eas-hover-white w3-btn  eas-abs" >
+									<i class="fas fa-angle-right"></i>  
+								</a>
+							</span> -->
+
+							
+						</div>
+						</div>
+
+						<div class="w3-twothird">
+							
+								<div class="w3-dropdown-click">
+									<a href="#" title="" class="eas-theme-grad w3-card-4 w3-btn eas-abs " id="drop1" >
+									Background <i class="fas fa-caret-down" ></i> 
+								</a>
+				<div class="w3-dropdown-content  w3-card w3-container " id="bgset" style="width: 270px!important;z-index:100;">
+					<div class="w3-row">
+						<div class="w3-half">
+							<a href="" class="w3-button w3-right w3-hover-light-gray w3-white theme-red-dark-text-hover  " > <img src="images/space.jpg" width="100%" class="w3-image"> </a>
+						</div>
+						<div class="w3-half">
+							<a href="#" class="w3-button  w3-hover-light-gray w3-white theme-red-dark-text-hover  " > <img src="images/pebbles.jpg" width="100%" onclick="tryit" class="w3-image"> </a>
+						</div>
+						
+					</div>
+					<div class="w3-row">
+						<div class="w3-half">
+							<a href="" class="w3-button w3-right w3-hover-light-gray w3-white theme-red-dark-text-hover  " > <img src="images/build.jpg" width="100%" class="w3-image"> </a>
+						</div>
+						<div class="w3-half">
+							<a href="#" class="w3-button  w3-hover-light-gray w3-white theme-red-dark-text-hover  " > <img src="images/city.jpg" width="100%" class="w3-image"> </a>
+						</div>
+					</div>
+					<footer class="eas-theme-grad" style="width: 100%">
+						<a href="#" class="w3-button eas-theme-grad">
+							<i class="fas fa-plus"></i>
+						</a>
+					</footer>
+					<br>
+				</div>
+				</div>
+							<!-- <a href="#" class="w3-button w3-left w3-hover-light-gray w3-white theme-red-dark-text-hover  padding-tech" ><img src="images/city.jpg" width="100%" class="w3-image"></a>
+					
+					
+					
+					 -->
+						</div>
+						
+				</div>
+				<div class="content w3-small" style="overflow: auto">
+					<ul class="w3-ul w3-border-top">
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:1	</span>
+In the beginning God created the heaven and the earth.(KJV)<span class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:2</span>
+
+And the earth was without form, and void; and darkness [was] upon the face of the deep. And the Spirit of God moved upon the face of the waters.(KJV)<span  class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:3</span>
+
+And God said, Let there be light: and there was light.(KJV)<span  class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    <li class="w3-display-container"><span class="w3-text-pink">Genesis 1:4</span>
+And God saw the light, that [it was] good: and God divided the light from the darkness.(KJV)
+In the beginning God created the heaven and the earth.(KJV) <span class="w3-button w3-transparent w3-display-right eas-hover-bg w3-hover-text-white "><i class="fas fa-angle-right"></i> </span></li>
+				    
+				</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Large Alert Box -->
+
+	<div class="w3-modal" id="alert" >
+		<div class="w3-modal-content  w3-round-large w3-animate-top" style="max-width: 45%;">
+			<div class="">
+				<header id="header" class="eas-theme-grad w3-large w3-container">
+					<h3><span class="w3-left w3-padding w3-large icon icon-info"></span> Alert <a href="#close" class="" onclick="_('alert').Hide();"><span class="w3-right w3-padding w3-large icon icon-close w3-button w3-hover-white w3-hover-text-red"></span></a></h3>
+				</header>
+				<div class="w3-padding w3-center">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="w3-modal" id="new_file" >
+		<div class="w3-modal-content  w3-round-large w3-animate-top" style="max-width: 60%;">
+			<div class="">
+				<header id="header" class="eas-theme-grad eas-abs">
+					<h3><span class="w3-left w3-padding w3-large icon icon-new-file"></span> New File <a href="#close" class="" onclick="_('new_file').Hide();"><span class="w3-right w3-padding w3-large icon icon-close w3-button w3-hover-white w3-hover-text-red"></span></a></h3>
+				</header>
+				<div class="w3-padding ">
+					<form action="" method="" accept-charset="utf-8">
+						<div class="w3-row">
+							<div class="w3-col l1 m1">
+								<label class="eas-theme-text"><b>Title:</b></label>
+							</div>
+							<div class="w3-col l11 m11">
+								<input type="text" class="w3-input w3-border" name="">
+							</div>
+						</div>
+						<br>
+						<label class="eas-theme-text"><b>Content</b></label><br>
+						<textarea style="width:100%;max-width: 800px;max-height: 200px;"  rows="10" cols="70" ></textarea>
+					</form>
+				</div>
+				<footer class="eas-theme-grad w3-center">
+
+					<a href="#" title="" class="eas-abs eas-theme-border w3-button w3-hover-white eas-hover-theme-text"><i class="fas fa-save"></i> Save</a>
+					<a href="#close" class="" onclick="_('new_file').Hide();"><span class="eas-abs eas-theme-border w3-button w3-hover-white w3-hover-white w3-hover-text-red icon icon-close "> Close</span></a>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<div class="w3-modal" id="alert_image" >
+		<div class="w3-modal-content  w3-round-large w3-animate-top" style="max-width: 60%;">
+			<div class="" >
+				<header id="header" class="eas-theme-grad w3-large w3-container" >
+					<h3><span class="w3-left w3-padding w3-xlarge icon icon-info"></span> Alert With Image<a href="#close" class="" onclick="_('alert_image').Hide();"><span class="w3-right w3-padding w3-small icon icon-close w3-button w3-hover-white w3-hover-text-red"></span></a></h3>
+				</header>
+				<br>
+				<div class="w3-row-padding">
+					<div class="w3-col l7 m7">
+						<div class="w3-padding w3-center">
+								This is Miss Blessing Akpan,  consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. <!-- Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+						</div>
+					</div>
+					<div class="w3-col l5 m5">
+						<div class="w3-image w3-border ">
+							<img src="images/bless.jpg" alt="" class="w3-image" style="width: 100%">
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+
+	<!-- Small Alert Box -->
+	<div class="w3-modal w3-small" id="small_alxert" >
+		<div class="w3-modal-content  w3-round-large w3-animate-top" style="max-width: 20%;">
+			<div class="">
+				<header id="header" class="eas-theme-grad w3-small w3-container">
+					<h5><span class="w3-left w3-padding w3-small icon icon-info"></span> Alert <a href="#close" class="" onclick="_('small_alert').TopIn();"><span class="w3-right w3-padding w3-small icon icon-close w3-button w3-hover-white w3-hover-text-red"></span></a></h5>
+				</header>
+				<div class="w3-padding w3-center">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- <div class=" w3-small" id="small_alert" >
+		<div class="w3-modal-content  w3-round-large" style="max-width: 20%;">
+			<div class="">
+				<header id="header" class=" w3-small w3-container">
+					<h5><span class="w3-left w3-padding w3-small icon icon-info"></span> Alert <a href="#close" class="" onclick="_('small_alert').TopOut();"><span class="w3-right w3-padding w3-small icon icon-close w3-button w3-hover-white w3-hover-text-red"></span></a></h5>
+				</header>
+				
+				
+			</div>
+		</div>
+	</div> -->
+<div style="background-color: white!important" class="w3-white eas-alert eas-theme-border eas-theme-grad w3-small w3-container">
+					<h5><span class="w3-left w3-padding w3-small icon icon-info"></span> Alert </h5>
+</div style="background-color: white!important">
+
+</div>	
+
+<script>
+	
+_.Ready(function(){	
+	_.Log(_);
+	_('bgset').Hide();
+	_('drop1').Assign('click',function(){
+	_('bgset').ToggleShow();
+});
+_.Log('Loading Super Worship Ready !');
+});
+</script>
+</body>
+</html>
